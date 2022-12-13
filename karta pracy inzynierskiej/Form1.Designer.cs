@@ -60,6 +60,7 @@ namespace karta_pracy_inzynierskiej
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -327,11 +328,20 @@ namespace karta_pracy_inzynierskiej
             this.label19.TabIndex = 29;
             this.label19.Text = "Jednostka \r\norganizacyjna \r\npromotora:\r\n";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(354, 616);
+            this.maskedTextBox1.Mask = "   ";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(152, 20);
+            this.maskedTextBox1.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 949);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
@@ -402,6 +412,7 @@ namespace karta_pracy_inzynierskiej
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 
