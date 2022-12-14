@@ -67,6 +67,13 @@ namespace karta_pracy_inzynierskiej
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,6 +220,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 20);
             this.textBox1.TabIndex = 14;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox7
             // 
@@ -220,6 +229,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 20;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // label13
             // 
@@ -310,6 +321,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 32;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox3
             // 
@@ -317,6 +330,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 33;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
             // 
@@ -324,13 +339,18 @@ namespace karta_pracy_inzynierskiej
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 34;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(199, 674);
+            this.textBox5.Location = new System.Drawing.Point(199, 660);
+            this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(266, 54);
             this.textBox5.TabIndex = 35;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox6
             // 
@@ -339,6 +359,7 @@ namespace karta_pracy_inzynierskiej
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 36;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // textBox8
             // 
@@ -346,6 +367,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 37;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox9
             // 
@@ -353,6 +376,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 20);
             this.textBox9.TabIndex = 38;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
             // 
             // textBox10
             // 
@@ -360,6 +385,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(124, 20);
             this.textBox10.TabIndex = 39;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // textBox11
             // 
@@ -367,6 +394,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(124, 20);
             this.textBox11.TabIndex = 40;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
             // 
             // textBox12
             // 
@@ -374,6 +403,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(124, 20);
             this.textBox12.TabIndex = 41;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
             // 
             // textBox13
             // 
@@ -381,6 +412,8 @@ namespace karta_pracy_inzynierskiej
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(136, 20);
             this.textBox13.TabIndex = 42;
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
+            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox13_KeyPress);
             // 
             // textBox14
             // 
@@ -388,12 +421,89 @@ namespace karta_pracy_inzynierskiej
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(136, 20);
             this.textBox14.TabIndex = 43;
+            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(344, 956);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(193, 13);
+            this.label20.TabIndex = 44;
+            this.label20.Text = "..............................................................";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label21.Location = new System.Drawing.Point(308, 969);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(265, 12);
+            this.label21.TabIndex = 45;
+            this.label21.Text = "podpis dyrektora/kierownika jednostki organizacyjnej promotora";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(614, 956);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(223, 13);
+            this.label22.TabIndex = 46;
+            this.label22.Text = "........................................................................";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(672, 968);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(115, 13);
+            this.label23.TabIndex = 47;
+            this.label23.Text = "data i podpis Dziekana";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(402, 1034);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 45);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Zatwierdź";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(642, 1050);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(0, 13);
+            this.label24.TabIndex = 49;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(689, 1049);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(0, 13);
+            this.label25.TabIndex = 50;
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 949);
+            this.ClientSize = new System.Drawing.Size(881, 1107);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox12);
@@ -478,6 +588,13 @@ namespace karta_pracy_inzynierskiej
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
     }
 }
 
