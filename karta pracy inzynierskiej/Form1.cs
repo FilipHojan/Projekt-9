@@ -348,39 +348,40 @@ namespace karta_pracy_inzynierskiej
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            SautinSoft.PdfVision v = new SautinSoft.PdfVision();
-
-            string screen = @"screenshot.png";
-            v.PageStyle.PageSize.Auto();
-
-            // Create screen with 1920*1040 px.
-            Rectangle rect = new Rectangle(0, 0, 1920, 1040);
-            Bitmap bmp = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
-            Graphics g = Graphics.FromImage(bmp);
-            g.CopyFromScreen(rect.Right, rect.Top, 0, 0, bmp.Size, CopyPixelOperation.SourceCopy);
-            bmp.Save(screen, ImageFormat.Png);
-
-            // Create object of Image class from file.
-            System.Drawing.Image image = Image.FromFile(screen);
-
-            byte[] imgBytes = null;
-
-            using (MemoryStream ms = new System.IO.MemoryStream())
+            var doc = Form.ActiveForm;
+            using(var bmp = new Bitmap(doc.Width, doc.Height))
             {
-                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                imgBytes = ms.ToArray();
+                doc.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, bmp.Width, bmp.Height));
+                bmp.Save(@"C:\Users\filip\Desktop\karta_pracy.png");
+                MessageBox.Show("Udało się !!!");
             }
 
-            // Convert image stream to PDF file.
-            FileInfo outFile = new FileInfo(@"Result.pdf");
-            int ret = v.ConvertImageStreamToPDFFile(imgBytes, outFile.FullName);
-            if (ret == 0)
+            // We assume GdPicture has been correctly installed and unlocked.
+            using (GdPictureDocumentConverter oConverter = new GdPictureDocumentConverter())
             {
-                // Open the resulting PDF document in a default PDF Viewer.
-                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile.FullName) { UseShellExecute = true });
+                // Select your source image and its image format (TIFF, JPG, PNG, SVG, and 50+ more).
+                GdPictureStatus status = oConverter.LoadFromFile("input.jpg", GdPicture14.DocumentFormat.DocumentFormatJPEG);
+                if (status == GdPictureStatus.OK)
+                {
+                    MessageBox.Show("The file has been loaded successfully.", "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Select the conformance of the resulting PDF document.
+                    status = oConverter.SaveAsPDF("output.pdf", PdfConformance.PDF);
+                    if (status == GdPictureStatus.OK)
+                    {
+                        MessageBox.Show("The file has been saved successfully.", "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("The file has failed to save. Status: " + status.ToString(), "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("The file has failed to load. Status: " + status.ToString(), "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            */
+
+
         }
 
 
@@ -388,3 +389,14 @@ namespace karta_pracy_inzynierskiej
 
     }
 }
+
+/*
+ // Convert image stream to PDF file.
+            FileInfo outFile = new FileInfo(@"Result.pdf");
+            int ret = v.ConvertImageStreamToPDFFile(imgBytes, outFile.FullName);
+            if (ret == 0)
+            {
+                // Open the resulting PDF document in a default PDF Viewer.
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile.FullName) { UseShellExecute = true });
+            }
+ */
