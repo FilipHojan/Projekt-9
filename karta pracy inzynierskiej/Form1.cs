@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
+using GdPicture14;
 
 namespace karta_pracy_inzynierskiej
 {
@@ -360,12 +361,12 @@ namespace karta_pracy_inzynierskiej
             using (GdPictureDocumentConverter oConverter = new GdPictureDocumentConverter())
             {
                 // Select your source image and its image format (TIFF, JPG, PNG, SVG, and 50+ more).
-                GdPictureStatus status = oConverter.LoadFromFile("input.jpg", GdPicture14.DocumentFormat.DocumentFormatJPEG);
+                GdPictureStatus status = oConverter.LoadFromFile(@"C:\Users\filip\Desktop\karta_pracy.png", GdPicture14.DocumentFormat.DocumentFormatJPEG);
                 if (status == GdPictureStatus.OK)
                 {
                     MessageBox.Show("The file has been loaded successfully.", "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Select the conformance of the resulting PDF document.
-                    status = oConverter.SaveAsPDF("output.pdf", PdfConformance.PDF);
+                    status = oConverter.SaveAsPDF(@"C:\Users\filip\Desktop\karta_pracy.pdf", PdfConformance.PDF);
                     if (status == GdPictureStatus.OK)
                     {
                         MessageBox.Show("The file has been saved successfully.", "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Information);

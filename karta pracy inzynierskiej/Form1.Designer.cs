@@ -468,7 +468,7 @@ namespace karta_pracy_inzynierskiej
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(402, 1034);
+            this.button1.Location = new System.Drawing.Point(741, 686);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 45);
             this.button1.TabIndex = 48;
