@@ -442,14 +442,25 @@ namespace karta_pracy_inzynierskiej
                 }
 
             }
-            else
+            else if(textBox1.Text != "Politechnika Poznańska")
             {
                 textBox1.Text = "!";
+                MessageBox.Show("Proszę wprowadzić poprawne dane");
+            }
+            else if(textBox10.Text != "Ogólnoakademicki")
+            {
                 textBox10.Text = "!";
+                MessageBox.Show("Proszę wprowadzić poprawne dane");
+            }
+            else if(textBox11.Text == "Stacjonarne" || textBox11.Text == "Niestacjonarne")
+            {
                 textBox11.Text = "!";
+                MessageBox.Show("Proszę wprowadzić poprawne dane");
+            }
+            else if(textBox12.Text == "Pierwszego stopnia" || textBox12.Text == "Drugiego stopnia")
+            {
                 textBox12.Text = "!";
                 MessageBox.Show("Proszę wprowadzić poprawne dane");
-
             }
         }
 
