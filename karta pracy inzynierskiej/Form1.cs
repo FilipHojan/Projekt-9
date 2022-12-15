@@ -21,6 +21,8 @@ namespace karta_pracy_inzynierskiej
         }
 
         bool x = false;
+        bool y = false;
+        bool z = false;
 
         /*
          */
@@ -77,7 +79,14 @@ namespace karta_pracy_inzynierskiej
         }
         private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         /*
@@ -85,11 +94,26 @@ namespace karta_pracy_inzynierskiej
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
-
+            if (y == true)
+            {
+                if (textBox10.Text == "Ogolnoakademicki" || textBox10.Text == "Ogólnoakademicki" || textBox10.Text == "ogólnoakademicki" || textBox10.Text == "ogolnoakademicki")
+                {
+                    textBox10.Text = "Ogólnoakademicki";
+                    MessageBox.Show("Zapisano jako: \n Ogólnoakademicki");
+                }
+                else
+                {
+                    y = false;
+                    MessageBox.Show("ERROR");
+                }
+            }
         }
         private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                y = true;
+            }
         }
 
         /*
@@ -97,11 +121,32 @@ namespace karta_pracy_inzynierskiej
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-
+            if (z == true)
+            {
+                if (textBox11.Text == "Stacjonarne" || textBox11.Text == "stacjonarne")
+                {
+                    textBox1.Text = "Stacjonarne";
+                    MessageBox.Show("Zapisano jako: \n Stacjonarne");
+                }
+                else if (textBox11.Text == "Zaoczne" || textBox11.Text == "zaoczne")
+                {
+                    textBox1.Text = "Zaoczne";
+                    MessageBox.Show("Zapisano jako: \n Zaoczne");
+                }
+                else
+                {
+                    z = false;
+                    MessageBox.Show("ERROR");
+                }
+            }
         }
         private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
 
+                z = true;
+            }
         }
 
         /*
@@ -303,6 +348,7 @@ namespace karta_pracy_inzynierskiej
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             SautinSoft.PdfVision v = new SautinSoft.PdfVision();
 
             string screen = @"screenshot.png";
@@ -334,6 +380,7 @@ namespace karta_pracy_inzynierskiej
                 // Open the resulting PDF document in a default PDF Viewer.
                 System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile.FullName) { UseShellExecute = true });
             }
+            */
         }
 
 

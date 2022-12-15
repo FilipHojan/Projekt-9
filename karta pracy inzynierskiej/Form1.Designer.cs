@@ -349,6 +349,7 @@ namespace karta_pracy_inzynierskiej
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(266, 54);
             this.textBox5.TabIndex = 35;
+            this.textBox5.Text = "Maks. 100 słów";
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
