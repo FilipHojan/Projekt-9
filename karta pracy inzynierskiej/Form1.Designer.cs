@@ -59,7 +59,6 @@ namespace karta_pracy_inzynierskiej
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -74,6 +73,7 @@ namespace karta_pracy_inzynierskiej
             this.button1 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -307,7 +307,7 @@ namespace karta_pracy_inzynierskiej
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(552, 455);
+            this.maskedTextBox2.Location = new System.Drawing.Point(570, 455);
             this.maskedTextBox2.Mask = "00/00/0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(64, 20);
@@ -345,22 +345,14 @@ namespace karta_pracy_inzynierskiej
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(199, 660);
+            this.textBox5.MaxLength = 200;
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(266, 54);
             this.textBox5.TabIndex = 35;
-            this.textBox5.Text = "Maks. 100 słów";
+            this.textBox5.Text = "Maks. 200 słów";
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(199, 734);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 36;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // textBox8
             // 
@@ -468,7 +460,7 @@ namespace karta_pracy_inzynierskiej
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(741, 686);
+            this.button1.Location = new System.Drawing.Point(60, 952);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 45);
             this.button1.TabIndex = 48;
@@ -493,11 +485,21 @@ namespace karta_pracy_inzynierskiej
             this.label25.TabIndex = 50;
             this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(199, 734);
+            this.maskedTextBox3.Mask = "00/00/0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(60, 20);
+            this.maskedTextBox3.TabIndex = 51;
+            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 1107);
+            this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.button1);
@@ -512,7 +514,6 @@ namespace karta_pracy_inzynierskiej
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -543,7 +544,7 @@ namespace karta_pracy_inzynierskiej
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -581,7 +582,6 @@ namespace karta_pracy_inzynierskiej
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
@@ -596,6 +596,7 @@ namespace karta_pracy_inzynierskiej
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
     }
 }
 

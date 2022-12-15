@@ -24,6 +24,7 @@ namespace karta_pracy_inzynierskiej
         bool x = false;
         bool y = false;
         bool z = false;
+        bool k = false;
 
         /*
          */
@@ -35,12 +36,13 @@ namespace karta_pracy_inzynierskiej
                 if (textBox1.Text == "Politechnika Poznańska" || textBox1.Text == "politechnika Poznańska" || textBox1.Text == "Politechnika poznańska" || textBox1.Text == "politechnika poznańska" || textBox1.Text == "Politechnika Poznanska")
                 {
                     textBox1.Text = "Politechnika Poznańska";
-                    MessageBox.Show("Zapisano jako: \n Politechnika Poznańska");
+                    MessageBox.Show("Zapisano jako: \nPolitechnika Poznańska");
                 }
                 else
                 {
                     x = false;
-                    MessageBox.Show("ERROR \n Podpowiedź: \n Spójrz na logo formularza :)");
+                    textBox1.Text = "";
+                    MessageBox.Show("ERROR \n Podpowiedź: \nSpójrz na logo formularza :)");
                 }
             }
         }
@@ -100,11 +102,12 @@ namespace karta_pracy_inzynierskiej
                 if (textBox10.Text == "Ogolnoakademicki" || textBox10.Text == "Ogólnoakademicki" || textBox10.Text == "ogólnoakademicki" || textBox10.Text == "ogolnoakademicki")
                 {
                     textBox10.Text = "Ogólnoakademicki";
-                    MessageBox.Show("Zapisano jako: \n Ogólnoakademicki");
+                    MessageBox.Show("Zapisano jako: \nOgólnoakademicki");
                 }
                 else
                 {
                     y = false;
+                    textBox10.Text = "";
                     MessageBox.Show("ERROR");
                 }
             }
@@ -126,17 +129,18 @@ namespace karta_pracy_inzynierskiej
             {
                 if (textBox11.Text == "Stacjonarne" || textBox11.Text == "stacjonarne")
                 {
-                    textBox1.Text = "Stacjonarne";
-                    MessageBox.Show("Zapisano jako: \n Stacjonarne");
+                    textBox11.Text = "Stacjonarne";
+                    MessageBox.Show("Zapisano jako: \nStacjonarne");
                 }
-                else if (textBox11.Text == "Zaoczne" || textBox11.Text == "zaoczne")
+                else if (textBox11.Text == "Niestacjonarne" || textBox11.Text == "niestacjonarne")
                 {
-                    textBox1.Text = "Zaoczne";
-                    MessageBox.Show("Zapisano jako: \n Zaoczne");
+                    textBox11.Text = "Niestacjonarne";
+                    MessageBox.Show("Zapisano jako: \nNiestacjonarne");
                 }
                 else
                 {
                     z = false;
+                    textBox11.Text = "";
                     MessageBox.Show("ERROR");
                 }
             }
@@ -155,11 +159,33 @@ namespace karta_pracy_inzynierskiej
 
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-
+            if (k == true)
+            {
+                if (textBox12.Text == "1 stopnia" || textBox12.Text == "pierwszego stopnia" || textBox12.Text == "Pierwszego stopnia")
+                {
+                    textBox12.Text = "Pierwszego stopnia";
+                    MessageBox.Show("Zapisano jako: \n Pierwszego stopnia");
+                }
+                else if(textBox12.Text == "2 stopnia" || textBox12.Text == "drugiego stopnia" || textBox12.Text == "Drugiego stopnia")
+                {
+                    textBox12.Text = "Drugiego stopnia";
+                    MessageBox.Show("Zapisano jako: \nDrugiego stopnia");
+                }
+                else
+                {
+                    k = false;
+                    textBox12.Text = "";
+                    MessageBox.Show("ERROR");
+                }
+            }
         }
         private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
 
+                k = true;
+            }
         }
 
         /*
@@ -171,7 +197,14 @@ namespace karta_pracy_inzynierskiej
         }
         private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         /*
@@ -184,7 +217,14 @@ namespace karta_pracy_inzynierskiej
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         /*
@@ -197,7 +237,14 @@ namespace karta_pracy_inzynierskiej
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         /*
@@ -209,7 +256,7 @@ namespace karta_pracy_inzynierskiej
         }
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            
         }
 
         /*
@@ -221,22 +268,18 @@ namespace karta_pracy_inzynierskiej
         }
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         /*
-         */
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        /*
+         
          */
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -245,7 +288,14 @@ namespace karta_pracy_inzynierskiej
         }
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         /*
@@ -258,7 +308,14 @@ namespace karta_pracy_inzynierskiej
 
         private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
 
@@ -349,40 +406,51 @@ namespace karta_pracy_inzynierskiej
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var doc = Form.ActiveForm;
-            using(var bmp = new Bitmap(doc.Width, doc.Height))
+            if(textBox1.Text == "Politechnika Poznańska" && textBox10.Text == "Ogólnoakademicki" && (textBox11.Text == "Stacjonarne" || textBox11.Text == "Niestacjonarne") && (textBox12.Text == "Pierwszego stopnia" || textBox12.Text == "Drugiego stopnia"))
             {
-                doc.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save(@"C:\Users\filip\Desktop\karta_pracy.png");
-                MessageBox.Show("Udało się !!!");
-            }
-
-            // We assume GdPicture has been correctly installed and unlocked.
-            using (GdPictureDocumentConverter oConverter = new GdPictureDocumentConverter())
-            {
-                // Select your source image and its image format (TIFF, JPG, PNG, SVG, and 50+ more).
-                GdPictureStatus status = oConverter.LoadFromFile(@"C:\Users\filip\Desktop\karta_pracy.png", GdPicture14.DocumentFormat.DocumentFormatJPEG);
-                if (status == GdPictureStatus.OK)
+                var doc = Form.ActiveForm;
+                using (var bmp = new Bitmap(doc.Width, doc.Height))
                 {
-                    MessageBox.Show("The file has been loaded successfully.", "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Select the conformance of the resulting PDF document.
-                    status = oConverter.SaveAsPDF(@"C:\Users\filip\Desktop\karta_pracy.pdf", PdfConformance.PDF);
+                    doc.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, bmp.Width, bmp.Height));
+                    bmp.Save(@"C:\Users\filip\Desktop\karta_pracy.png");
+                    MessageBox.Show("Udało się !!!");
+                }
+
+                // We assume GdPicture has been correctly installed and unlocked.
+                using (GdPictureDocumentConverter oConverter = new GdPictureDocumentConverter())
+                {
+                    // Select your source image and its image format (TIFF, JPG, PNG, SVG, and 50+ more).
+                    GdPictureStatus status = oConverter.LoadFromFile(@"C:\Users\filip\Desktop\karta_pracy.png", GdPicture14.DocumentFormat.DocumentFormatJPEG);
                     if (status == GdPictureStatus.OK)
                     {
-                        MessageBox.Show("The file has been saved successfully.", "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("The file has been loaded successfully.", "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //Select the conformance of the resulting PDF document.
+                        status = oConverter.SaveAsPDF(@"C:\Users\filip\Desktop\karta_pracy.pdf", PdfConformance.PDF);
+                        if (status == GdPictureStatus.OK)
+                        {
+                            MessageBox.Show("The file has been saved successfully.", "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("The file has failed to save. Status: " + status.ToString(), "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("The file has failed to save. Status: " + status.ToString(), "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("The file has failed to load. Status: " + status.ToString(), "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("The file has failed to load. Status: " + status.ToString(), "Conversion to PDF Example", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
             }
+            else
+            {
+                textBox1.Text = "!";
+                textBox10.Text = "!";
+                textBox11.Text = "!";
+                textBox12.Text = "!";
+                MessageBox.Show("Proszę wprowadzić poprawne dane");
 
-
+            }
         }
 
 
@@ -390,14 +458,3 @@ namespace karta_pracy_inzynierskiej
 
     }
 }
-
-/*
- // Convert image stream to PDF file.
-            FileInfo outFile = new FileInfo(@"Result.pdf");
-            int ret = v.ConvertImageStreamToPDFFile(imgBytes, outFile.FullName);
-            if (ret == 0)
-            {
-                // Open the resulting PDF document in a default PDF Viewer.
-                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile.FullName) { UseShellExecute = true });
-            }
- */
